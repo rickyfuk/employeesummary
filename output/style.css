@@ -1,0 +1,12 @@
+.team-heading {
+	background: rgb(250, 105, 105);
+}
+
+.team-heading h1 {
+	font-size: 5rem;
+	color: azure;
+}
+
+.card {
+	margin: 5px;
+}
