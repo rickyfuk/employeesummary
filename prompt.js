@@ -43,7 +43,7 @@ module.exports = {
 			},
 			// validate if the input is letter only
 			validate: function (value) {
-				const pass = false;
+				let pass = false;
 				if (
 					value.matchvalue.match(
 						/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i
