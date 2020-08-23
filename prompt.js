@@ -79,7 +79,7 @@ module.exports = {
 			type: 'list',
 			name: 'staffChoice',
 			message: 'What kind of action do you want yo do?',
-			choices: ['Add a Engineer', 'Add a Intern', 'I am done'],
+			choices: ['Add an Engineer', 'Add an Intern', 'I am done'],
 		},
 	],
 	// question for the intern

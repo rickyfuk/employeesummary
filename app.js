@@ -34,10 +34,10 @@ async function addMember() {
 	const choice = await inquirer.prompt(prompts.staffChoice);
 
 	switch (choice.staffChoice) {
-		case 'Engineer':
+		case 'Add an Engineer':
 			await addEngineer();
 			break;
-		case 'Intern':
+		case 'Add an Intern':
 			await addIntern();
 			break;
 		default:
