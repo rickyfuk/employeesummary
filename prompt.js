@@ -45,9 +45,7 @@ module.exports = {
 			validate: function (value) {
 				let pass = false;
 				if (
-					value.matchvalue.match(
-						/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i
-					) &&
+					value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i) &&
 					value.length != 0
 				) {
 					pass = true;
@@ -130,9 +128,7 @@ module.exports = {
 			validate: function (value) {
 				let pass = false;
 				if (
-					value.matchvalue.match(
-						/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i
-					) &&
+					value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i) &&
 					value.length != 0
 				) {
 					pass = true;
@@ -206,9 +202,7 @@ module.exports = {
 			validate: function (value) {
 				let pass = false;
 				if (
-					value.matchvalue.match(
-						/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i
-					) &&
+					value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i) &&
 					value.length != 0
 				) {
 					pass = true;
