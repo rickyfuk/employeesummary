@@ -7,8 +7,8 @@ module.exports = {
 			message: 'Please enter the name of the MANAGER:',
 			// validate if the input is letter only
 			validate: function (value) {
-				const pass = false;
-				if (value.match(/^[A-Za-z]+$/) && value.length != 0) {
+				let pass = false;
+				if (value.match(/^[A-Za-z]+$/)) {
 					pass = true;
 				}
 				if (pass) {
@@ -23,7 +23,7 @@ module.exports = {
 			message: 'Please enter the Staff ID of the MANAGER:',
 			// validate if the input is letter only
 			validate: function (value) {
-				const pass = false;
+				let pass = false;
 				if (value.match(/^[0-9]+$/) && value.length != 0) {
 					pass = true;
 				}
@@ -93,7 +93,7 @@ module.exports = {
 			// validate if the input is letter only
 			validate: function (value) {
 				const pass = false;
-				if (value.match(/^[A-Za-z]+$/) && value.length != 0) {
+				if (value.match(/^[A-Za-z]+$/) && value != '') {
 					pass = true;
 				}
 				if (pass) {

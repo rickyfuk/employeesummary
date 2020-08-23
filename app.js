@@ -10,7 +10,7 @@ const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
 
 const render = require('./lib/htmlRenderer');
-let teamarray = [];
+let teamArray = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -29,11 +29,11 @@ async function init() {
 	teamArray.push(manager);
 	addMember();
 }
-
+// let the manager to choose add another staff or end
 async function addMember() {
 	const choice = await inquirer.prompt(prompts.staffChoice);
 
-	switch (choice.employeeChoice) {
+	switch (choice.staffChoice) {
 		case 'Engineer':
 			await addEngineer();
 			break;
@@ -50,9 +50,9 @@ async function addEngineer() {
 
 	const engineer = new Engineer(
 		engineerAnswers.engineerName,
-		engineerAnswers.engineerID,
+		engineerAnswers.engineerId,
 		engineerAnswers.engineerEmail,
-		engineerAnswers.engineerGitHub
+		engineerAnswers.engineerGithub
 	);
 
 	teamArray.push(engineer);
@@ -64,7 +64,7 @@ async function addIntern() {
 
 	const intern = new Intern(
 		internAnswers.internName,
-		internAnswers.internID,
+		internAnswers.internId,
 		internAnswers.internEmail,
 		internAnswers.internSchool
 	);
@@ -82,6 +82,17 @@ async function addIntern() {
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
+
+// render the team information to html
+async function buildTeam() {
+	const result = await render(teamArray);
+	fs.writeFile(outputPath, result, function (err) {
+		if (err) throw err;
+	});
+}
+
+// run the initial funtion for at the beginning
+init();
 
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
